@@ -1,0 +1,71 @@
+===================================
+
+Échec de la récupération de données pour cette demande. (Microsoft.SqlServer.Management.Sdk.Sfc)
+
+------------------------------
+Pour obtenir de l'aide, cliquez sur : https://go.microsoft.com/fwlink?ProdName=Microsoft%20SQL%20Server&LinkId=20476
+
+------------------------------
+Emplacement du programme :
+
+   à Microsoft.SqlServer.Management.Sdk.Sfc.Enumerator.Process(Object connectionInfo, Request request)
+   à Microsoft.SqlServer.Management.SqlManagerUI.AttachDatabaseData.PrimaryFile.GetOriginalDatabaseName(String primaryFilePath)
+   à Microsoft.SqlServer.Management.SqlManagerUI.AttachDatabaseData.PrimaryFile.PopulatePrimaryFileData(String primaryFilePath, Boolean isXIPath)
+   à Microsoft.SqlServer.Management.SqlManagerUI.AttachDatabaseData.PrimaryFile..ctor(SqlManagementUserControl parent, CDataContainer dc, String fullPath, String databaseOwner, ServerConnection connectionInfo, Boolean isXIPath)
+   à Microsoft.SqlServer.Management.SqlManagerUI.AttachDatabase.AddPrimaryFile(String fullPath, String fileName, Boolean isXIPath)
+   à Microsoft.SqlServer.Management.SqlManagerUI.AttachDatabase.buttonBrowse_Click(Object sender, EventArgs e)
+
+===================================
+
+Une exception s'est produite lors de l'exécution d'un lot ou d'une instruction Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)
+
+------------------------------
+Emplacement du programme :
+
+   à Microsoft.SqlServer.Management.Common.ServerConnection.GetExecuteReader(SqlCommand command)
+   à Microsoft.SqlServer.Management.Common.ServerConnection.ExecuteReader(String sqlCommand, SqlCommand& command)
+   à Microsoft.SqlServer.Management.Smo.ExecuteSql.GetDataReader(String query, SqlCommand& command)
+   à Microsoft.SqlServer.Management.Smo.DataProvider.SetConnectionAndQuery(ExecuteSql execSql, String query)
+   à Microsoft.SqlServer.Management.Smo.ExecuteSql.GetDataProvider(StringCollection query, Object con, StatementBuilder sb, RetriveMode rm)
+   à Microsoft.SqlServer.Management.Smo.SqlObjectBase.FillData(ResultType resultType, StringCollection sql, Object connectionInfo, StatementBuilder sb)
+   à Microsoft.SqlServer.Management.Smo.SqlObjectBase.FillDataWithUseFailure(SqlEnumResult sqlresult, ResultType resultType)
+   à Microsoft.SqlServer.Management.Smo.SqlObjectBase.BuildResult(EnumResult result)
+   à Microsoft.SqlServer.Management.Smo.PrimaryFile.GetData(EnumResult erParent)
+   à Microsoft.SqlServer.Management.Sdk.Sfc.Environment.GetData()
+   à Microsoft.SqlServer.Management.Sdk.Sfc.Environment.GetData(Request req, Object ci)
+   à Microsoft.SqlServer.Management.Sdk.Sfc.Enumerator.GetData(Object connectionInfo, Request request)
+   à Microsoft.SqlServer.Management.Sdk.Sfc.Enumerator.Process(Object connectionInfo, Request request)
+
+===================================
+
+CREATE FILE a rencontré l'erreur du système d'exploitation 5(Accès refusé.) en essayant d'ouvrir ou de créer le fichier physique 'M:\MSSQL\SharePoint_Config.mdf'. (Framework Microsoft SqlClient Data Provider)
+
+------------------------------
+Pour obtenir de l'aide, cliquez sur : https://docs.microsoft.com/sql/relational-databases/errors-events/mssqlserver-5123-database-engine-error
+
+------------------------------
+Nom du serveur : RSQLSHP003\SPSE
+Numéro de l'erreur : 5123
+Gravité : 16
+État : 20
+Numéro de la ligne : 1
+
+
+------------------------------
+Emplacement du programme :
+
+   à Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   à Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   à Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   à Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   à Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   à Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   à Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   à Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   à Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   à Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   à Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   à Microsoft.Data.SqlClient.SqlCommand.ExecuteReader()
+   à Microsoft.SqlServer.Management.Common.ConnectionManager.ExecuteTSql(ExecuteTSqlAction action, Object execObject, DataSet fillDataSet, Boolean catchException)
+   à Microsoft.SqlServer.Management.Common.ServerConnection.GetExecuteReader(SqlCommand command)
+
