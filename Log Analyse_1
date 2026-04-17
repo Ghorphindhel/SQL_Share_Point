@@ -1,0 +1,16 @@
+Cas 1 — le fichier .ldf existe ailleurs
+
+Si SharePoint_Config_log.ldf existe sur un autre disque ou dossier, attache la base en T-SQL en donnant les bons chemins exacts :
+
+CREATE DATABASE [SharePoint_Config]
+ON 
+(FILENAME = N'L:\MSSQL\SharePoint_Config.mdf'),
+(FILENAME = N'CHEMIN_REEL\SharePoint_Config_log.ldf')
+FOR ATTACH;
+Cas 2 — le fichier .ldf est réellement perdu / absent
+
+Tu peux tenter :
+
+CREATE DATABASE [SharePoint_Config]
+ON (FILENAME = N'L:\MSSQL\SharePoint_Config.mdf')
+FOR ATTACH_REBUILD_LOG;
