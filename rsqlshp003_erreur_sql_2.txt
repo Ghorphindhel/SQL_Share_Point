@@ -1,0 +1,56 @@
+===================================
+
+Échec de Attacher la base de données pour Serveur « RSQLSHP003\SPSE ».  (Microsoft.SqlServer.Smo)
+
+------------------------------
+Pour obtenir de l'aide, cliquez sur : https://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=17.100.40.0&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.FailedOperationExceptionText&EvtID=Attacher+la+base+de+données+Server&LinkId=20476
+
+------------------------------
+Emplacement du programme :
+
+   à Microsoft.SqlServer.Management.Smo.Server.AttachDatabaseWorker(String name, StringCollection files, String owner, AttachOptions attachOptions)
+   à Microsoft.SqlServer.Management.Smo.Server.AttachDatabase(String name, StringCollection files)
+   à Microsoft.SqlServer.Management.SqlManagerUI.AttachDatabaseData.PrimaryFile.Attach()
+   à Microsoft.SqlServer.Management.SqlManagerUI.AttachDatabase.SendDataToServer()
+
+===================================
+
+Une exception s'est produite lors de l'exécution d'un lot ou d'une instruction Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)
+
+------------------------------
+Emplacement du programme :
+
+   à Microsoft.SqlServer.Management.Common.ServerConnection.ExecuteNonQuery(String sqlCommand, ExecutionTypes executionType, Boolean retry)
+   à Microsoft.SqlServer.Management.Common.ServerConnection.ExecuteNonQuery(StringCollection sqlCommands, ExecutionTypes executionType, Boolean retry)
+   à Microsoft.SqlServer.Management.Smo.ExecutionManager.ExecuteNonQuery(StringCollection queries, Boolean retry)
+   à Microsoft.SqlServer.Management.Smo.Server.AttachDatabaseWorker(String name, StringCollection files, String owner, AttachOptions attachOptions)
+
+===================================
+
+Impossible d'ouvrir le fichier physique "L:\MSSQL\SharePoint_Config_log.ldf". Erreur du système d'exploitation 2 : "2(Le fichier spécifié est introuvable.)".
+Échec de CREATE DATABASE. Certains noms de fichiers de la liste n'ont pas pu être créés. Voir les erreurs associées. (Framework Microsoft SqlClient Data Provider)
+
+------------------------------
+Pour obtenir de l'aide, cliquez sur : https://docs.microsoft.com/sql/relational-databases/errors-events/mssqlserver-5120-database-engine-error
+
+------------------------------
+Nom du serveur : RSQLSHP003\SPSE
+Numéro de l'erreur : 5120
+Gravité : 16
+État : 101
+Numéro de la ligne : 1
+
+
+------------------------------
+Emplacement du programme :
+
+   à Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   à Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   à Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   à Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   à Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   à Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   à Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   à Microsoft.SqlServer.Management.Common.ConnectionManager.ExecuteTSql(ExecuteTSqlAction action, Object execObject, DataSet fillDataSet, Boolean catchException)
+   à Microsoft.SqlServer.Management.Common.ServerConnection.ExecuteNonQuery(String sqlCommand, ExecutionTypes executionType, Boolean retry)
+
