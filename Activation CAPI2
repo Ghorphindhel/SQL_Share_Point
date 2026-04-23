@@ -1,0 +1,1 @@
+reg add HKLM\Software\Microsoft\Cryptography\OID\EncodingType 0\CertDllCreateCertificateChainEngine\Config /v Debug /t REG_DWORD /d 1
